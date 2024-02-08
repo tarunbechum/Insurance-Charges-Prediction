@@ -1,4 +1,5 @@
-# Insurance Charges Prediction Project
+# Predicting Insurance Charges Using Linear Regression: A Machine Learning Approach
+#### Explore how machine learning can help forecast healthcare expenses. Our project uses basic linear regression to estimate insurance charges based on factors like age, BMI, smoking habits, and region. Get straightforward insights into what drives healthcare costs and make smarter insurance decisions.
 
 ## Problem Statement
 
@@ -46,7 +47,9 @@ The dataset includes the following columns:
 - statsmodels.stats.outliers_influence.variance_inflation_factor
 - statsmodels.api
 - sklearn.model_selection.train_test_split
+
 ## Step-by-Step Analysis
+
 
 1. **Checking for Missing Values**: Investigated the dataset for any missing values and handled them appropriately.
 
@@ -77,8 +80,6 @@ The dataset includes the following columns:
 14. **Calculating R-squared Score for Predicted Charges**: Assessed the goodness-of-fit of the model by calculating the R-squared score.
 
 15. **Checking Normality of Residuals for Linear Regression Assumption**: Verified the normality assumption of linear regression by examining the distribution of residuals.
-
-
 
 ## Conclusion
 
