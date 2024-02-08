@@ -8,10 +8,6 @@ Insurance companies often need to estimate the charges for their customers based
 
 This project aims to develop a machine learning model to predict insurance charges using linear regression. The model utilizes demographic and lifestyle data to estimate insurance charges for individuals.
 
-## Insurance Charges Dataset
-
-This dataset contains information about individuals' demographics and healthcare charges.
-
 ### Data Description
 
 The dataset includes the following columns:
@@ -39,23 +35,53 @@ The dataset includes the following columns:
 | 37  | male   | 29.83 | 2        | no     | northeast  | 6406.4107  |
 | 60  | female | 25.84 | 0        | no     | northwest  | 28923.13692|
 
+## Libraries Used
+
+- pandas
+- numpy
+- seaborn
+- sklearn.preprocessing.LabelEncoder
+- sklearn.linear_model.LinearRegression
+- sklearn.metrics.r2_score
+- statsmodels.stats.outliers_influence.variance_inflation_factor
+- statsmodels.api
+- sklearn.model_selection.train_test_split
 ## Step-by-Step Analysis
 
-1. **Data Exploration**: Explored the dataset to understand its structure and characteristics, identifying features and the target variable.
-   
-2. **Data Preprocessing**: Performed data preprocessing tasks such as handling missing values, encoding categorical variables, and scaling numerical features.
+1. **Checking for Missing Values**: Investigated the dataset for any missing values and handled them appropriately.
 
-3. **Exploratory Data Analysis (EDA)**: Analyzed relationships between variables, visualized distributions, and identified patterns in the data.
+2. **Assumptions of Linear Regression**: Validated key assumptions of linear regression, including linearity, normality of residuals, and homoscedasticity.
 
-4. **Feature Selection**: Utilized techniques like correlation analysis and forward/backward elimination to select the most relevant features for the prediction model.
+3. **Data Column Division**: Divided the dataset into numeric and categorical columns for further analysis.
 
-5. **Model Building**: Developed a linear regression model using the selected features to predict insurance charges.
+4. **Checking Linearity with Scatter Plot using seaborn**: Visualized the relationship between independent and dependent variables using scatter plots.
 
-6. **Model Evaluation**: Evaluated the model's performance using metrics such as R-squared, mean squared error, and mean absolute error.
+5. **Checking Linearity with Scatter Plot using LabelEncoder**: Examined linearity after encoding categorical variables using LabelEncoder.
 
-7. **Assumption Checking**: Validated key assumptions of linear regression, including linearity, normality of residuals, and homoscedasticity.
+6. **Visualizing Outliers in "Age" Column using boxplot seaborn**: Identified and visualized outliers in the "age" column using box plots.
+
+7. **Treating Outliers in "BMI" Column using IQR**: Detected and handled outliers in the "BMI" column using the interquartile range (IQR) method.
+
+8. **Multicollinearity Assessment using Variance Inflation Factor (VIF)**: Checked for multicollinearity among independent variables using the VIF.
+
+9. **Checking Correlation Among Variables**: Evaluated the correlation between independent variables and the target variable.
+
+10. **Feature Selection Using Forward and Backward Elimination**: Employed forward and backward elimination techniques to select the most relevant features for the prediction model.
+
+11. **Splitting the Dataset into Training and Testing Sets**: Partitioned the dataset into training and testing sets to evaluate model performance.
+
+12. **Normalization Using Min-Max Scaler**: Normalized the training data to ensure consistent feature scaling.
+
+13. **Prediction and Comparison of Actual vs. Predicted Charges**: Predicted insurance charges using the trained model and compared them with actual charges.
+
+14. **Calculating R-squared Score for Predicted Charges**: Assessed the goodness-of-fit of the model by calculating the R-squared score.
+
+15. **Checking Normality of Residuals for Linear Regression Assumption**: Verified the normality assumption of linear regression by examining the distribution of residuals.
+
+
 
 ## Conclusion
 
-The machine learning model developed in this project demonstrates strong predictive capability in estimating insurance charges based on demographic and lifestyle factors. The model achieves a high R-squared score of approximately 0.741 on the test data, indicating that around 74.1% of the variance in actual insurance charges is explained by the model's predictions. Overall, the project provides valuable insights into building predictive models for insurance charge estimation.
+The machine learning model developed in this project demonstrates strong predictive capability in estimating insurance charges based on demographic and lifestyle factors. The model achieves a high R-squared score on the test data, indicating a good fit to the data. Overall, the project provides valuable insights into building predictive models for insurance charge estimation.
+
 
